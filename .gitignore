@@ -1,0 +1,10 @@
+target/
+.classpath
+.project
+*.class
+.settings
+.idea/*
+*.iml
+bin
+!.gitignore
+go.sum
