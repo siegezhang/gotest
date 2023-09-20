@@ -53,3 +53,52 @@ func TestGeneric(t *testing.T) {
 	lst.Push(23)
 	fmt.Println("list:", lst.GetAll())
 }
+
+func TestLoop(t *testing.T) {
+	items := []string{"111", "211"}
+
+	var all []*string
+	for _, item := range items {
+		item := item
+		all = append(all, &item)
+	}
+	items[0] = "asd"
+
+	for _, item := range all {
+		println(*item)
+	}
+
+}
+
+func TestLoop1(t *testing.T) {
+	items := []string{"111", "211"}
+
+	var all []*string
+	for _, item := range items {
+		all = append(all, &item)
+	}
+
+	for _, item := range all {
+		println(*item)
+	}
+
+}
+func TestLoop2(t *testing.T) {
+	var prints []func()
+	for _, v := range []int{1, 2, 3} {
+		prints = append(prints, func() { fmt.Println(v) })
+	}
+	for _, print := range prints {
+		print()
+	}
+}
+func TestLoop3(t *testing.T) {
+	var prints []func()
+	for _, v := range []int{1, 2, 3} {
+		v := v
+		prints = append(prints, func() { fmt.Println(v) })
+	}
+	for _, print := range prints {
+		print()
+	}
+}
