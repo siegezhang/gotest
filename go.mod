@@ -2,6 +2,8 @@ module gotest
 
 go 1.22.0
 
+require github.com/smartystreets/goconvey v1.8.1
+
 require (
 	github.com/IBM/fp-go v1.0.139 // indirect
 	github.com/bytedance/sonic v1.9.1 // indirect
@@ -29,7 +31,6 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/smarty/assertions v1.15.0 // indirect
-	github.com/smartystreets/goconvey v1.8.1 // indirect
 	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
